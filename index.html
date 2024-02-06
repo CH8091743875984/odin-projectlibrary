@@ -11,9 +11,29 @@
     <div class="menu">
         <button id="showDialog">New Book</button>
         <dialog id="newBookDialog">
-            <button autofocus id="closeDialog">Close</button>
-            <p>Input your new book below.</p>
             
+            <p>Input your new book below.</p>
+            <form id="bookForm" action="" method="get">
+                <div class="formFields">
+                    <label for="inputAuthor">Author</label>
+                    <input id="inputAuthor" type="text" name="Author" required>
+                    <label for="inputTitle">Title</label>
+                    <input id="inputTitle" type="text" name="Title" required>
+                    <label for="inputPages">Pages</label>
+                    <input id="inputPages" type="text" name="Pages" required>
+                    <label for="inputReadStatus">Your read status?</label>
+                    <input id="inputReadStatus" type="text" name="Read_Status" required>
+
+
+                </div>
+            <div class="formButtons">
+                <button id="saveDialog" form="bookForm" type="submit">Save</button>
+                <button id="closeDialog">Cancel</button>
+            </div>
+            
+            
+
+            </form>
         </dialog>
     </div>
     <div class="library">

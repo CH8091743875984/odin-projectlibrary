@@ -16,7 +16,6 @@ function addBookToLibrary(book) {
     return myLibrary.push(book)
 }
 
-// https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/insertCell
 function displaySingleBook(book) {
     let tableRef = document.getElementById("shelf");
 
@@ -50,6 +49,7 @@ displayAllBooks()
 const dialog = document.getElementById('newBookDialog')
 const showButton = document.getElementById('showDialog')
 const closeButton = document.getElementById('closeDialog')
+const saveButton = document.getElementById('saveDialog')
 
 showButton.addEventListener('click', () => {
     dialog.showModal();
