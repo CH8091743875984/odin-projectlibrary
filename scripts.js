@@ -45,3 +45,16 @@ let testbooktwo = new Book('second book here', 'another name','1111', 'not read'
 addBookToLibrary(testbooktwo)
 
 displayAllBooks()
+
+//new book modal setup
+const dialog = document.getElementById('newBookDialog')
+const showButton = document.getElementById('showDialog')
+const closeButton = document.getElementById('closeDialog')
+
+showButton.addEventListener('click', () => {
+    dialog.showModal();
+})
+
+closeButton.addEventListener('click', () => {
+    dialog.close();
+})
