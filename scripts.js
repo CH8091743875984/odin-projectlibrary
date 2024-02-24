@@ -58,3 +58,18 @@ showButton.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
     dialog.close();
 })
+
+saveButton.addEventListener('click', (event) => {
+    event.preventDefault()
+    
+    myBook = new Book(
+        document.getElementById('inputAuthor').value,
+        document.getElementById('inputTitle').value,
+        document.getElementById('inputPages').value,
+        document.getElementById('inputReadStatus').value
+    )
+
+    addBookToLibrary(myBook)
+    displaySingleBook(myBook)
+    dialog.close()
+})
