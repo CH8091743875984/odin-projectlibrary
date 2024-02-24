@@ -13,6 +13,7 @@ function Book(title, author, pageCount, readStatus) {
     }
 
 function addBookToLibrary(book) {
+    
     return myLibrary.push(book)
 }
 
@@ -29,13 +30,15 @@ function displaySingleBook(book) {
         newCell.appendChild(newText)
     }
     )
+    // book['bookIndex'] = myLibrary.length 
+    // console.log(book['bookIndex'])
     let deleteCell = newRow.insertCell(-1);
-    deleteCell.appendChild(createBookDeleteButton())
-
+    deleteCell.appendChild(createBookDeleteButton(book.bookIndex))
 }
 
 function displayAllBooks(library=myLibrary) {
-    library.forEach((book) => {
+    library.forEach((book, index) => {
+        book['bookIndex'] = index
         displaySingleBook(book)
     }
     )
@@ -73,22 +76,39 @@ saveButton.addEventListener('click', (event) => {
     )
 
     addBookToLibrary(myBook)
-    displaySingleBook(myBook)
+    refreshDisplay()
     dialog.close()
 })
 
 //remove book functions
 
-function createBookDeleteButton() {
+function createBookDeleteButton(bookToDelete) {
     const deleteButton = document.createElement('button')
     deleteButton.textContent = 'X'
     deleteButton.addEventListener('click', () => {
         console.log('Request to delete')
+        console.log(bookToDelete)
+        deleteBookByIndex(bookToDelete)
     })
 
     return deleteButton
-
-    // const deleteCell = document.createElement('td')
-    // deleteCell.appendChild(deleteButton)
-    // return deleteCell
     }
+
+function deleteBookByIndex(removeIndex) {
+    myLibrary.splice(removeIndex, 1)
+    refreshDisplay()
+}
+
+function clearDisplay () {
+    let table = document.getElementById('shelf')
+    let tbody = table.getElementsByTagName('tbody')[0]
+    let rows = tbody.getElementsByTagName('tr')
+    for (let i = rows.length -1; i>0; i--) {
+        tbody.removeChild(rows[i])
+    }
+}
+
+function refreshDisplay() {
+    clearDisplay()
+    displayAllBooks()
+}
