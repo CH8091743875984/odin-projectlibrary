@@ -34,6 +34,10 @@ function displaySingleBook(book) {
     // console.log(book['bookIndex'])
     let deleteCell = newRow.insertCell(-1);
     deleteCell.appendChild(createBookDeleteButton(book.bookIndex))
+
+    let readCell = newRow.insertCell(-1);
+    readCell.appendChild(createBookReadButton())
+
 }
 
 function displayAllBooks(library=myLibrary) {
@@ -86,8 +90,8 @@ function createBookDeleteButton(bookToDelete) {
     const deleteButton = document.createElement('button')
     deleteButton.textContent = 'X'
     deleteButton.addEventListener('click', () => {
-        console.log('Request to delete')
-        console.log(bookToDelete)
+        // console.log('Request to delete')
+        // console.log(bookToDelete)
         deleteBookByIndex(bookToDelete)
     })
 
@@ -112,3 +116,16 @@ function refreshDisplay() {
     clearDisplay()
     displayAllBooks()
 }
+
+//read status toggle button
+
+function createBookReadButton() {
+    const readButton = document.createElement('button')
+    readButton.textContent = 'read'
+    readButton.addEventListener('click', () => {
+        console.log('Request to toggle')
+        // console.log(bookToDelete)
+    })
+
+    return readButton
+    }
