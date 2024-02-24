@@ -5,12 +5,24 @@ function Book(title, author, pageCount, readStatus) {
     this.author = author;
     this.pageCount = pageCount;
     this.readStatus = readStatus;
-
+    
     this.displayInfo = function() {
         return this.title+', by '+this.author+', '+this.pageCount
         +' pages, '+readStatus
     };
+
+    this.toggleReadStatus = function() {
+        if (this.readStatus === 'read') {
+            return this.readStatus = 'not read'
+        } else if (this.readStatus === 'not read') {
+            return this.readStatus = 'read'
+        } else {
+            return this.readStatus = 'not read'
+        }
     }
+
+
+}
 
 function addBookToLibrary(book) {
     
@@ -36,7 +48,7 @@ function displaySingleBook(book) {
     deleteCell.appendChild(createBookDeleteButton(book.bookIndex))
 
     let readCell = newRow.insertCell(-1);
-    readCell.appendChild(createBookReadButton())
+    readCell.appendChild(createBookReadButton(book.bookIndex))
 
 }
 
@@ -119,12 +131,13 @@ function refreshDisplay() {
 
 //read status toggle button
 
-function createBookReadButton() {
+function createBookReadButton(toggleIndex) {
     const readButton = document.createElement('button')
     readButton.textContent = 'read'
     readButton.addEventListener('click', () => {
         console.log('Request to toggle')
-        // console.log(bookToDelete)
+        myLibrary[toggleIndex].toggleReadStatus()
+        refreshDisplay()
     })
 
     return readButton
