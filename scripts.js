@@ -29,6 +29,9 @@ function displaySingleBook(book) {
         newCell.appendChild(newText)
     }
     )
+    let deleteCell = newRow.insertCell(-1);
+    deleteCell.appendChild(createBookDeleteButton())
+
 }
 
 function displayAllBooks(library=myLibrary) {
@@ -73,3 +76,19 @@ saveButton.addEventListener('click', (event) => {
     displaySingleBook(myBook)
     dialog.close()
 })
+
+//remove book functions
+
+function createBookDeleteButton() {
+    const deleteButton = document.createElement('button')
+    deleteButton.textContent = 'X'
+    deleteButton.addEventListener('click', () => {
+        console.log('Request to delete')
+    })
+
+    return deleteButton
+
+    // const deleteCell = document.createElement('td')
+    // deleteCell.appendChild(deleteButton)
+    // return deleteCell
+    }
