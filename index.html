@@ -21,10 +21,12 @@
                     <label for="inputTitle">Title</label>
                     <input id="inputTitle" type="text" name="Title" required>
                     <label for="inputPages">Pages</label>
-                    <input id="inputPages" type="text" name="Pages" required>
+                    <input id="inputPages" type="number" name="Pages" inputmode="numeric" required>
                     <label for="inputReadStatus">Your read status?</label>
-                    <input id="inputReadStatus" type="text" name="Read_Status" required>
-
+                    <select id="inputReadStatus" name="Read_Status">
+                        <option value="Unread" selected>Unread</option>
+                        <option value="Read">Read</option>
+                    </select>
 
                 </div>
             <div class="formButtons">

@@ -12,12 +12,12 @@ function Book(title, author, pageCount, readStatus) {
     };
 
     this.toggleReadStatus = function() {
-        if (this.readStatus === 'read') {
-            return this.readStatus = 'not read'
-        } else if (this.readStatus === 'not read') {
-            return this.readStatus = 'read'
+        if (this.readStatus === 'Read') {
+            return this.readStatus = 'Unread'
+        } else if (this.readStatus === 'Unread') {
+            return this.readStatus = 'Read'
         } else {
-            return this.readStatus = 'not read'
+            return this.readStatus = 'Unread'
         }
     };
 }
@@ -58,9 +58,9 @@ function displayAllBooks(library=myLibrary) {
     )
 }
 
-let testbook = new Book('test book', 'test name', '999', 'read')
+let testbook = new Book('test book', 'test name', '999', 'Read')
 addBookToLibrary(testbook)
-let testbooktwo = new Book('second book here', 'another name','1111', 'not read')
+let testbooktwo = new Book('second book here', 'another name','1111', 'Unread')
 addBookToLibrary(testbooktwo)
 
 displayAllBooks()
@@ -131,7 +131,7 @@ function refreshDisplay() {
 
 function createBookReadButton(toggleIndex) {
     const readButton = document.createElement('button')
-    readButton.textContent = 'read'
+    readButton.textContent = 'Read'
     readButton.addEventListener('click', () => {
         console.log('Request to toggle')
         myLibrary[toggleIndex].toggleReadStatus()
