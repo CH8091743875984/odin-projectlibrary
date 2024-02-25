@@ -1,3 +1,84 @@
+body {
+    background-color: rgb(240, 240, 240);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.pageTitle {
+    background-color: white;
+    padding: 15px;
+    margin: 5px;
+    font-size: 2rem;
+}
+
+.menu {
+    background-color: white;
+    padding: 15px;
+    margin: 5px;
+}
+
+.library {
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+}
+
+#newBookDialog {
+    border: 5px solid black;
+    width: 300px;
+}
+
 .formFields {
     display: grid;
 }
+
+.formFields input {
+    margin-bottom: 10px;
+}
+
+#shelf {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#shelf th {
+    border-bottom: 1px solid grey;
+    text-align: center;
+    padding: 0px 3px 0px 3px;
+}
+
+#shelf td {
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+#shelf td:nth-child(3) {
+    text-align: center;
+}
+
+.columnAuthor {
+    width: 25vw;
+}
+
+.columnBookTitle {
+    width: 40vw;
+}
+
+.columnPages {
+    width: 10vw;
+}
+
+.columnReadStatus {
+    width: 10vw;
+}
+
+.columnDeleteButton, .columnToggleButton {
+    width: 5vw;
+}
+
+/* <th id="columnAuthor">Author</th>
+<th id="columnBookTitle">Title</th>
+<th id="columnPages">Pages</th>
+<th id="columnReadStatus">Read?</th>
+<th id="columnDeleteButton"></th>
+<th id="columnToggleButton"></th> */
