@@ -19,9 +19,7 @@ function Book(title, author, pageCount, readStatus) {
         } else {
             return this.readStatus = 'not read'
         }
-    }
-
-
+    };
 }
 
 function addBookToLibrary(book) {
