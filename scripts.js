@@ -42,11 +42,12 @@ function displaySingleBook(book) {
     )
     // book['bookIndex'] = myLibrary.length 
     // console.log(book['bookIndex'])
+    let readCell = newRow.insertCell(-1);
+    readCell.appendChild(createBookReadButton(book.bookIndex))
+
     let deleteCell = newRow.insertCell(-1);
     deleteCell.appendChild(createBookDeleteButton(book.bookIndex))
 
-    let readCell = newRow.insertCell(-1);
-    readCell.appendChild(createBookReadButton(book.bookIndex))
 
 }
 
