@@ -1,5 +1,29 @@
 const myLibrary = [];
 
+class Book {
+    constructor(title, author, pageCount, readStatus) {
+        this.title = title;
+        this.author = author;
+        this.pageCount = pageCount;
+        this.readStatus = readStatus;
+        this.displayInfo = function() {
+            return this.title+', by '+this.author+', '+this.pageCount
+            +' pages, '+readStatus
+        };
+    
+        this.toggleReadStatus = function() {
+            if (this.readStatus === 'Read') {
+                return this.readStatus = 'Unread'
+            } else if (this.readStatus === 'Unread') {
+                return this.readStatus = 'Read'
+            } else {
+                return this.readStatus = 'Unread'
+            }
+        };
+    }
+}
+
+/*
 function Book(title, author, pageCount, readStatus) {
     this.title = title;
     this.author = author;
@@ -20,7 +44,7 @@ function Book(title, author, pageCount, readStatus) {
             return this.readStatus = 'Unread'
         }
     };
-}
+}*/
 
 function addBookToLibrary(book) {
     
