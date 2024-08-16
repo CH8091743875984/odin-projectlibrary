@@ -105,7 +105,7 @@ function initializeBookModal() {
 
     const bookForm = document.getElementById("bookForm");
     if (!bookForm.checkValidity()) {
-      alert("your input is bad");
+      toggleFormErrorShowHide();
       console.log(bookForm.reportValidity());
     } else {
       addBookToLibrary(myBook);
@@ -177,6 +177,11 @@ function setValidationTooShort(element) {
       console.log("input length ok");
     }
   });
+}
+
+function toggleFormErrorShowHide() {
+  const formError = document.querySelector(".formError");
+  formError.classList.toggle("hide");
 }
 
 function initializeFormValidation() {

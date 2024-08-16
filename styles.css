@@ -79,13 +79,20 @@ body {
 }
 
 input:focus {
-  /* border-color: blue; */
-  box-shadow: 0 0 7px rgba(0, 102, 204, 0.5);
-  /* outline: none; */
+  border: 2px solid black;
+  outline: none;
 }
 
 input:invalid:not(:placeholder-shown) {
-  outline: 1px solid rgb(227, 5, 247);
+  outline: 2px solid rgb(227, 5, 247);
+}
+
+.formError {
+  color: red;
+}
+
+.hide {
+  display: none;
 }
 
 /* <th id="columnAuthor">Author</th>

@@ -21,7 +21,7 @@
               type="text"
               name="Author"
               minlength="2"
-              placeholder=" .  "
+              placeholder=" "
               required
             />
             <label for="inputTitle">Title</label>
@@ -30,7 +30,7 @@
               type="text"
               name="Title"
               minlength="2"
-              placeholder=" .  "
+              placeholder=" "
               required
             />
             <label for="inputPages">Pages</label>
@@ -41,7 +41,7 @@
               inputmode="numeric"
               min="1"
               max="9999"
-              placeholder=" .  "
+              placeholder=" "
               required
             />
             <label for="inputReadStatus">Your read status?</label>
@@ -53,6 +53,9 @@
           <div class="formButtons">
             <button id="saveDialog" form="bookForm" type="submit">Save</button>
             <button id="closeDialog">Cancel</button>
+          </div>
+          <div class="formError hide">
+            Data not submitted, errors exist in form.
           </div>
         </form>
       </dialog>
