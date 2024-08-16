@@ -105,7 +105,7 @@ function initializeBookModal() {
 
     const bookForm = document.getElementById("bookForm");
     if (!bookForm.checkValidity()) {
-      toggleFormErrorShowHide();
+      formErrorShow();
       console.log(bookForm.reportValidity());
     } else {
       addBookToLibrary(myBook);
@@ -117,6 +117,7 @@ function initializeBookModal() {
 
 function resetNewBookForm() {
   document.getElementById("bookForm").reset();
+  document.querySelector(".formError").classList.add("hide");
 }
 
 //remove book functions
@@ -150,6 +151,7 @@ function clearDisplay() {
 function refreshDisplay() {
   clearDisplay();
   displayAllBooks();
+  resetNewBookForm();
 }
 
 //read status toggle button
@@ -179,9 +181,11 @@ function setValidationTooShort(element) {
   });
 }
 
-function toggleFormErrorShowHide() {
+function formErrorShow() {
   const formError = document.querySelector(".formError");
-  formError.classList.toggle("hide");
+  if (formError.classList.contains("hide")) {
+    formError.classList.remove("hide");
+  }
 }
 
 function initializeFormValidation() {
