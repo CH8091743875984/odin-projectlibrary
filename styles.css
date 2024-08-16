@@ -78,6 +78,16 @@ body {
   width: 5vw;
 }
 
+input:focus {
+  /* border-color: blue; */
+  box-shadow: 0 0 7px rgba(0, 102, 204, 0.5);
+  /* outline: none; */
+}
+
+input:invalid:not(:placeholder-shown) {
+  outline: 1px solid rgb(227, 5, 247);
+}
+
 /* <th id="columnAuthor">Author</th>
 <th id="columnBookTitle">Title</th>
 <th id="columnPages">Pages</th>

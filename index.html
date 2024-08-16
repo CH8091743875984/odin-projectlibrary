@@ -16,15 +16,32 @@
         <form id="bookForm" action="" method="get">
           <div class="formFields">
             <label for="inputAuthor">Author</label>
-            <input id="inputAuthor" type="text" name="Author" required />
+            <input
+              id="inputAuthor"
+              type="text"
+              name="Author"
+              minlength="2"
+              placeholder=" .  "
+              required
+            />
             <label for="inputTitle">Title</label>
-            <input id="inputTitle" type="text" name="Title" required />
+            <input
+              id="inputTitle"
+              type="text"
+              name="Title"
+              minlength="2"
+              placeholder=" .  "
+              required
+            />
             <label for="inputPages">Pages</label>
             <input
               id="inputPages"
               type="number"
               name="Pages"
               inputmode="numeric"
+              min="1"
+              max="9999"
+              placeholder=" .  "
               required
             />
             <label for="inputReadStatus">Your read status?</label>
