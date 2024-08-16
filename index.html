@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js" defer=""></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="pageTitle">My Library</div>
     <div class="menu">
-        <button id="showDialog">New Book</button>
-        <dialog id="newBookDialog">
-            
-            <p>Input your new book below.</p>
-            <form id="bookForm" action="" method="get">
-                <div class="formFields">
-                    <label for="inputAuthor">Author</label>
-                    <input id="inputAuthor" type="text" name="Author" required>
-                    <label for="inputTitle">Title</label>
-                    <input id="inputTitle" type="text" name="Title" required>
-                    <label for="inputPages">Pages</label>
-                    <input id="inputPages" type="number" name="Pages" inputmode="numeric" required>
-                    <label for="inputReadStatus">Your read status?</label>
-                    <select id="inputReadStatus" name="Read_Status">
-                        <option value="Unread" selected>Unread</option>
-                        <option value="Read">Read</option>
-                    </select>
-
-                </div>
-            <div class="formButtons">
-                <button id="saveDialog" form="bookForm" type="submit">Save</button>
-                <button id="closeDialog">Cancel</button>
-            </div>
-            
-            
-
-            </form>
-        </dialog>
+      <button id="showDialog">New Book</button>
+      <dialog id="newBookDialog">
+        <p>Input your new book below.</p>
+        <form id="bookForm" action="" method="get">
+          <div class="formFields">
+            <label for="inputAuthor">Author</label>
+            <input id="inputAuthor" type="text" name="Author" required />
+            <label for="inputTitle">Title</label>
+            <input id="inputTitle" type="text" name="Title" required />
+            <label for="inputPages">Pages</label>
+            <input
+              id="inputPages"
+              type="number"
+              name="Pages"
+              inputmode="numeric"
+              required
+            />
+            <label for="inputReadStatus">Your read status?</label>
+            <select id="inputReadStatus" name="Read_Status">
+              <option value="Unread" selected>Unread</option>
+              <option value="Read">Read</option>
+            </select>
+          </div>
+          <div class="formButtons">
+            <button id="saveDialog" form="bookForm" type="submit">Save</button>
+            <button id="closeDialog">Cancel</button>
+          </div>
+        </form>
+      </dialog>
     </div>
     <div class="library">
-        <table id="shelf">
-            <tr>
-                <th class="columnAuthor">Author</th>
-                <th class="columnBookTitle">Title</th>
-                <th class="columnPages">Pages</th>
-                <th class="columnReadStatus">Read?</th>
-                <th class="columnToggleButton"></th>
-                <th class="columnDeleteButton"></th>
-            </tr>
-        </table>
-    
+      <table id="shelf">
+        <tr>
+          <th class="columnAuthor">Author</th>
+          <th class="columnBookTitle">Title</th>
+          <th class="columnPages">Pages</th>
+          <th class="columnReadStatus">Read?</th>
+          <th class="columnToggleButton"></th>
+          <th class="columnDeleteButton"></th>
+        </tr>
+      </table>
     </div>
-</body>
+  </body>
 </html>

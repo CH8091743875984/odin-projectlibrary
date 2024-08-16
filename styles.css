@@ -1,79 +1,81 @@
 body {
-    background-color: rgb(240, 240, 240);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0px;
+  background-color: rgb(240, 240, 240);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
 
 .pageTitle {
-    background-color: white;
-    padding: 15px;
-    margin: 5px;
-    font-size: 2rem;
+  background-color: white;
+  padding: 15px;
+  margin: 5px;
+  font-size: 2rem;
 }
 
 .menu {
-    background-color: white;
-    padding: 15px;
-    margin: 5px;
+  background-color: white;
+  padding: 15px;
+  margin: 5px;
 }
 
 .library {
-    background-color: white;
-    padding: 15px;
-    width: 100%;
+  background-color: white;
+  padding: 15px;
+  width: 100%;
 }
 
 #newBookDialog {
-    border: 5px solid black;
-    width: 300px;
+  border: 5px solid black;
+  width: 300px;
 }
 
 .formFields {
-    display: grid;
+  display: grid;
 }
 
-.formFields input, .formFields select {
-    margin-bottom: 10px;
+.formFields input,
+.formFields select {
+  margin-bottom: 10px;
 }
 
 #shelf {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 #shelf th {
-    border-bottom: 1px solid grey;
-    text-align: center;
-    padding: 0px 3px 0px 3px;
+  border-bottom: 1px solid grey;
+  text-align: center;
+  padding: 0px 3px 0px 3px;
 }
 
 #shelf td {
-    border-bottom: 1px solid rgb(196, 196, 196);
+  border-bottom: 1px solid rgb(196, 196, 196);
 }
 
 #shelf td:nth-child(3) {
-    text-align: center;
+  text-align: center;
 }
 
 .columnAuthor {
-    width: 25vw;
+  width: 25vw;
 }
 
 .columnBookTitle {
-    width: 40vw;
+  width: 40vw;
 }
 
 .columnPages {
-    width: 10vw;
+  width: 10vw;
 }
 
 .columnReadStatus {
-    width: 10vw;
+  width: 10vw;
 }
 
-.columnDeleteButton, .columnToggleButton {
-    width: 5vw;
+.columnDeleteButton,
+.columnToggleButton {
+  width: 5vw;
 }
 
 /* <th id="columnAuthor">Author</th>
